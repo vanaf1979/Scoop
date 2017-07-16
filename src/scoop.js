@@ -13,7 +13,7 @@ $coop = {
   */
   find: function( selector , context = null )
   {
-	    return ( context || document ).querySelector( selector );
+		return ( context || document ).querySelector( selector );
 	},
 
   /*
@@ -21,7 +21,7 @@ $coop = {
   */
   findAll: function( selector , context = null )
   {
-	    return ( context || document ).querySelectorAll( selector );
+		return ( context || document ).querySelectorAll( selector );
 	},
 
   /*
@@ -29,8 +29,8 @@ $coop = {
   */
   wrap: function( ellement , wrapper )
   {
-	    ellement.parentNode.insertBefore( wrapper , ellement )
-	    wrapper.appendChild( ellement )
+		ellement.parentNode.insertBefore( wrapper , ellement )
+		wrapper.appendChild( ellement )
 	},
 
   /*
@@ -50,11 +50,11 @@ $coop = {
   */
   inArray: function( needle , haystack )
   {
-	    for( var i = 0 ; i < haystack.length ; i++ )
-      {
-	        if( haystack[i] == needle ) return i;
-	    }
-	    return -1;
+		for( var i = 0 ; i < haystack.length ; i++ )
+		{
+			if( haystack[i] == needle ) return i;
+		}
+		return -1;
 	},
 
   /*
@@ -62,10 +62,10 @@ $coop = {
   */
   loop: function( list , callback )
   {
-    for ( var i = 0 ; i < list.length ; i++ )
-    {
-      callback( list[i] );
-    }
+		for ( var i = 0 ; i < list.length ; i++ )
+		{
+			callback( list[i] );
+		}
   },
 
   /*
@@ -77,8 +77,8 @@ $coop = {
   */
   getCookie: function( name )
   {
-	    var v = document.cookie.match( '(^|;) ?' + name + '=([^;]*)(;|$)' );
-	    return v ? v[2] : null;
+		var v = document.cookie.match( '(^|;) ?' + name + '=([^;]*)(;|$)' );
+		return v ? v[2] : null;
 	},
 
   /*
@@ -86,9 +86,9 @@ $coop = {
   */
   setCookie: function( name , value , days )
   {
-	    var d = new Date;
-	    d.setTime( d.getTime() + 24 * 60 * 60 * 1000 * days );
-	    document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+		var d = new Date;
+		d.setTime( d.getTime() + 24 * 60 * 60 * 1000 * days );
+		document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
 	},
 
   /*
