@@ -1,6 +1,8 @@
 # scoop
 Vanilla javascript utilities
 
+Readme content is comming...
+
 
 - find: https://gist.github.com/vanaf1979/5532d76e2e746d99b577f2fb33344b4d
 - findAll: https://gist.github.com/vanaf1979/c998b2cd38ccca26259ebc07169a2346
@@ -15,3 +17,7 @@ Vanilla javascript utilities
 - removeEvent: https://gist.github.com/vanaf1979/5ab09a29d8520b7bc8a31d7db3420531
 - triggerEvent: https://gist.github.com/vanaf1979/91a96e6e4da71cd6f5a835aa7f2f9572
 - depend: https://gist.github.com/vanaf1979/bb57f6d6bebfdd2f9a426381a360ac8d
+
+vanaf1979.nl / About
+--------
+While learning new programming languages and frameworks i like to come up with small experiments like this one. I could throw them in the bin, but why not shere for others, and maybe get some sugestions for improvements. http://vanaf1979.nl
