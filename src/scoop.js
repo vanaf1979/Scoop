@@ -8,33 +8,51 @@ $coop = {
   --  ### MISC
   */
 
-  /*
-  --  Find a DOM ellement.
+	
+   /**
+	  * Find a single dom ellement
+	  *
+	  * @param  string  selector
+	  * @param  string  context
+	  * @return dom ellement
   */
   find: function( selector , context = null )
   {
 		return ( context || document ).querySelector( selector );
 	},
 
-  /*
-  --  Find multiple DOM ellement.
+	
+  /**
+	  * Find multiple dom ellements
+	  *
+	  * @param  string  selector
+	  * @param  string  context
+	  * @return list of dom ellements
   */
   findAll: function( selector , context = null )
   {
 		return ( context || document ).querySelectorAll( selector );
 	},
 
-  /*
-  --  Wrap an ellement around another.
+	
+	/**
+	  * Wrap an ellement around another.
+	  *
+	  * @param  string  ellement
+	  * @param  string  wrapper
   */
   wrap: function( ellement , wrapper )
   {
 		ellement.parentNode.insertBefore( wrapper , ellement )
 		wrapper.appendChild( ellement )
 	},
-
-  /*
-  --  Parse a value to a bool.
+	
+	
+	/**
+	  * Parse a value to a bool.
+	  *
+	  * @param  string  value
+	  * @return bollean
   */
   parseBool: function( value )
   {
@@ -44,9 +62,14 @@ $coop = {
   /*
   --  ### ARRAYS
   */
-
-  /*
-  --  Is a value in an array?
+	
+	
+	/**
+	  * Is a value present in an array?
+	  *
+	  * @param  string  needle
+		* @param  array  haystack
+	  * @return int
   */
   inArray: function( needle , haystack )
   {
@@ -57,8 +80,12 @@ $coop = {
 		return -1;
 	},
 
-  /*
-  --  Loop throu an array/list
+	
+	/**
+	  * Loop through an array/list.
+	  *
+	  * @param  array  list
+		* @param  function  callback
   */
   loop: function( list , callback )
   {
@@ -72,8 +99,12 @@ $coop = {
   --  ### COOKIES
   */
 
-  /*
-  --  Set cookie value.
+	
+	/**
+	  * Get cookie value.
+	  *
+	  * @param  string  name
+	  * @return any
   */
   getCookie: function( name )
   {
@@ -81,8 +112,13 @@ $coop = {
 		return v ? v[2] : null;
 	},
 
-  /*
-  --  Get cookie value.
+	
+	/**
+	  * Set cookie value.
+	  *
+	  * @param  string  name
+		* @param  string  any
+		* @param  int  days
   */
   setCookie: function( name , value , days )
   {
@@ -91,8 +127,11 @@ $coop = {
 		document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
 	},
 
-  /*
-  --  Delete cookie value.
+	
+	/**
+	  * Delete cookie value.
+	  *
+	  * @param  string  name
   */
   deleteCookie: function( name )
   {
@@ -102,9 +141,14 @@ $coop = {
   /*
   --  ### EVENTS
   */
-
-  /*
-  --  Add event listner.
+	
+	
+	/**
+	  * Add event listner.
+	  *
+	  * @param  object  ellement
+		* @param  string  type
+		* @param  function  callback
   */
   addEvent: function( ellement , type , callback )
   {
@@ -118,8 +162,13 @@ $coop = {
     }
 	},
 
-  /*
-  --  Remove event listner.
+	
+	/**
+	  * Remove event listner.
+	  *
+	  * @param  object  ellement
+		* @param  string  type
+		* @param  function  callback
   */
   removeEvent: function( ellement , type , callback )
   {
@@ -133,8 +182,12 @@ $coop = {
     }
 	},
 
-  /*
-  --  Trigger events.
+	
+	/**
+	  * Trigger events.
+	  *
+	  * @param  object  ellement
+		* @param  string  type
   */
   triggerEvent: function( ellement , type )
   {
@@ -152,32 +205,39 @@ $coop = {
     }
 	},
 
-  /*
-  --  Fire on document ready.
+	
+	/**
+	  * Fire on document ready.
+	  *
+	  * @param  function  callback
   */
-  domReady: function( fn )
+  domReady: function( callback )
   {
     if ( document.readyState != 'loading' )
     {
-      fn();
+      callback();
     }
     else if ( document.addEventListener )
     {
-      this.addEvent( document , 'DOMContentLoaded' , fn );
+      this.addEvent( document , 'DOMContentLoaded' , callback );
     }
     else
     {
       this.addEvent( document , 'onreadystatechange' , function(){
         if ( document.readyState != 'loading' )
         {
-          fn();
+          callback();
         }
       })
     }
   },
 
-  /*
-  --  trim leading and trailing whitespace
+	
+	/**
+	  * trim leading and trailing whitespace
+	  *
+	  * @param  string  string
+		* @return  string
   */
   trim: function( string )
   {
@@ -196,13 +256,18 @@ $coop = {
   --  ### Ajax
   */
 
+	
   /*
   --  Track dependancy.
   */
   dependancies: [],
 
-  /*
-  --  Attach dependancy and run code.
+	
+	/**
+	  * Attach dependancy and run code.
+	  *
+	  * @param  string  url
+		* @param  function  callback
   */
   depend: function( url , callback )
   {
@@ -225,14 +290,17 @@ $coop = {
     }
   },
 
-  /*
-  --  ### Log
+	
+  /**
+	  * Log to consoleif present
+	  *
+	  * @param  string  message
   */
-  log: function( msg )
+  log: function( message )
   {
     if( typeof console !== "undefined" )
     {
-      console.log( msg )
+      console.log( message )
     }
   }
 
