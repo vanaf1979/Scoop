@@ -13,7 +13,7 @@ Vanilla javascript utilities
 * @param  string  context
 * @return dom ellement
 */
-$scoop.find( selector , context = null )
+$coop.find( selector , context = null )
 ```
 Plain js function: https://gist.github.com/vanaf1979/5532d76e2e746d99b577f2fb33344b4d
 
@@ -28,7 +28,7 @@ Plain js function: https://gist.github.com/vanaf1979/5532d76e2e746d99b577f2fb333
 * @param  string  context
 * @return list of dom ellements
 */
-$scoop.findAll( selector , context = null )
+$coop.findAll( selector , context = null )
 ```
 Plain js function: https://gist.github.com/vanaf1979/c998b2cd38ccca26259ebc07169a2346
 
@@ -42,7 +42,7 @@ Plain js function: https://gist.github.com/vanaf1979/c998b2cd38ccca26259ebc07169
 * @param  string  ellement
 * @param  string  wrapper
 */
-$scoop.wrap( ellement , wrapper )
+$coop.wrap( ellement , wrapper )
 ```
 Plain js function: https://gist.github.com/vanaf1979/19cc0048b802fa40ec84c263124acd9e
 
@@ -56,7 +56,7 @@ Plain js function: https://gist.github.com/vanaf1979/19cc0048b802fa40ec84c263124
 * @param  string  value
 * @return bollean
 */
-$scoop.parseBool( value )
+$coop.parseBool( value )
 ```
 Plain js function: https://gist.github.com/vanaf1979/e1f394b3fdd7ece80efdcedc2ce8cb19
 
@@ -71,7 +71,7 @@ Plain js function: https://gist.github.com/vanaf1979/e1f394b3fdd7ece80efdcedc2ce
 * @param  array  haystack
 * @return int
 */
-$scoop.inArray( needle , haystack )
+$coop.inArray( needle , haystack )
 ```
 Plain js function: https://gist.github.com/vanaf1979/450ac5e493b3b5e06a5c41959d7a8423
 
@@ -211,7 +211,7 @@ $coop.trim( string )
 *
 * @param  function  callback
 */
-$scoop.domReady( callback )
+$coop.domReady( callback )
 ```
 
 
@@ -223,7 +223,7 @@ $scoop.domReady( callback )
 *
 * @param  string  message
 */
-$scoop.log( message )
+$coop.log( message )
 ```
 
 vanaf1979.nl / About
